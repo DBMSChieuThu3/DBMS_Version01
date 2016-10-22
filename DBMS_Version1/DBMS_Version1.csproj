@@ -56,10 +56,109 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCauThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCauThu.Designer.cs">
+      <DependentUpon>FrmCauThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoiBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoiBong.Designer.cs">
+      <DependentUpon>FrmDoiBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHopDongCT_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHopDongCT_DB.Designer.cs">
+      <DependentUpon>FrmHopDongCT_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHopDongHLV_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHopDongHLV_DB.Designer.cs">
+      <DependentUpon>FrmHopDongHLV_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHopDongNTT_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHopDongNTT_DB.Designer.cs">
+      <DependentUpon>FrmHopDongNTT_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHopDongTL_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHopDongTL_DB.Designer.cs">
+      <DependentUpon>FrmHopDongTL_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHuanLuyenVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHuanLuyenVien.Designer.cs">
+      <DependentUpon>FrmHuanLuyenVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhaTaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhaTaiTro.Designer.cs">
+      <DependentUpon>FrmNhaTaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTroLyHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTroLyHLV.Designer.cs">
+      <DependentUpon>FrmTroLyHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTuoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTuoi.Designer.cs">
+      <DependentUpon>FrmTuoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCauThu.resx">
+      <DependentUpon>FrmCauThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiBong.resx">
+      <DependentUpon>FrmDoiBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHopDongCT_DB.resx">
+      <DependentUpon>FrmHopDongCT_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHopDongHLV_DB.resx">
+      <DependentUpon>FrmHopDongHLV_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHopDongNTT_DB.resx">
+      <DependentUpon>FrmHopDongNTT_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHopDongTL_DB.resx">
+      <DependentUpon>FrmHopDongTL_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHuanLuyenVien.resx">
+      <DependentUpon>FrmHuanLuyenVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhaTaiTro.resx">
+      <DependentUpon>FrmNhaTaiTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTroLyHLV.resx">
+      <DependentUpon>FrmTroLyHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTuoi.resx">
+      <DependentUpon>FrmTuoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

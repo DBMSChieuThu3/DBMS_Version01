@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMS_Version1
 {
-    public partial class FormMain : Form
+    public partial class FrmCauThu : Form
     {
-        public FormMain()
+        public FrmCauThu()
         {
             InitializeComponent();
         }
