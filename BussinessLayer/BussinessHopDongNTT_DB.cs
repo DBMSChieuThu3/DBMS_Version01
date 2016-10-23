@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 using DataAccessLayer;
 namespace BussinessLayer
 {
-    class HopDongNTT_DB
+    class BussinessHopDongNTT_DB
     {
         DALayer dal = null;
-        public HopDongNTT_DB()
+        public BussinessHopDongNTT_DB()
         {
             dal = new DALayer();
         }

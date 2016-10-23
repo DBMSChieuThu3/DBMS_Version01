@@ -8,44 +8,44 @@ using System.Data.SqlClient;
 using DataAccessLayer;
 namespace BussinessLayer
 {
-    public class TroLy
+    public class BussinessHLV
     {
         DALayer dal = null;
-        public TroLy()
+        public BussinessHLV()
         {
             dal = new DALayer();
         }
 
-        public DataSet getTroLi()
+        public DataSet getHLV()
         {
-            return dal.ExecuteQueryDataSet("Select * From TroLi ",
+            return dal.ExecuteQueryDataSet("Select * From HLV ",
                 CommandType.Text, null);
         }
 
-        public bool ThemTroLi(ref string err, string MaTL, string TenTL,
+        public bool ThemHLV(ref string err, string MaHLV, string TenHLV,
             DateTime NgSinh, string DiaChi, string SoDT)
         {
-            return dal.MyExecuteNonQuery("sp_Ins_TroLi", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaTL", MaTL),
-                new SqlParameter("@TenTL", TenTL),
+            return dal.MyExecuteNonQuery("sp_Ins_HLV", CommandType.StoredProcedure, ref err,
+                new SqlParameter("@MaHLV", MaHLV),
+                new SqlParameter("@TenHLV", TenHLV),
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
                 new SqlParameter("@SoDT", SoDT));
         }
 
-        public bool XoaTroLi(ref string err, string MaTL)
+        public bool XoaHLV(ref string err, string MaHLV)
         {
-            return dal.MyExecuteNonQuery("sp_Delete_TL",
+            return dal.MyExecuteNonQuery("sp_Delete_HLV",
                 CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaTL", MaTL));
+                new SqlParameter("@MaHLV", MaHLV));
         }
 
-        public bool CapNhatTroLi(ref string err, string MaTL, string TenTL,
+        public bool CapNhatHLV(ref string err, string MaHLV, string TenHLV,
             DateTime NgSinh, string DiaChi, string SoDT)
         {
-            return dal.MyExecuteNonQuery("sp_Update_TroLi", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaTL", MaTL),
-                new SqlParameter("@TenTL", TenTL),
+            return dal.MyExecuteNonQuery("sp_Update_HLV", CommandType.StoredProcedure, ref err,
+                new SqlParameter("@MaHLV", MaHLV),
+                new SqlParameter("@TenHLV", TenHLV),
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
                 new SqlParameter("@SoDT", SoDT));
@@ -53,3 +53,4 @@ namespace BussinessLayer
 
     }
 }
+

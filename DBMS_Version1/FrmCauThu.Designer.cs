@@ -85,6 +85,7 @@
             this.btnLuu.TabIndex = 82;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnExit
             // 
@@ -97,6 +98,7 @@
             this.btnExit.TabIndex = 81;
             this.btnExit.Text = "Đóng";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnReset
             // 
@@ -109,6 +111,7 @@
             this.btnReset.TabIndex = 80;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnXoa
             // 
@@ -121,6 +124,7 @@
             this.btnXoa.TabIndex = 79;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -133,6 +137,7 @@
             this.btnSua.TabIndex = 78;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -148,6 +153,7 @@
             this.btnThem.TabIndex = 77;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label8
             // 
@@ -166,6 +172,7 @@
             this.dgvCT.Name = "dgvCT";
             this.dgvCT.Size = new System.Drawing.Size(766, 231);
             this.dgvCT.TabIndex = 75;
+            this.dgvCT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCT_CellContentClick);
             // 
             // txtSDT
             // 

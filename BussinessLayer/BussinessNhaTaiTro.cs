@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 using DataAccessLayer;
 namespace BussinessLayer
 {
-    public class NhaTaiTro
+    public class BussinessNhaTaiTro
     {
         DALayer dal = null;
-        public NhaTaiTro()
+        public BussinessNhaTaiTro()
         {
             dal = new DALayer();
         }

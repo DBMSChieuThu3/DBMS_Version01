@@ -8,46 +8,46 @@ using System.Data.SqlClient;
 using DataAccessLayer;
 namespace BussinessLayer
 {
-    public class HopDongCT_DB
+    public class BussinessHopDongHLV_DB
     {
         DALayer dal = null;
-        public HopDongCT_DB()
+        public BussinessHopDongHLV_DB()
         {
             dal = new DALayer();
         }
 
-        public DataSet getHopDongCT_DB()
+        public DataSet getHopDongHLV_DB()
         {
-            return dal.ExecuteQueryDataSet("Select * From HopDongCT_DB ",
+            return dal.ExecuteQueryDataSet("Select * From HopDongHLV_DB ",
                 CommandType.Text, null);
         }
 
-        public bool ThemHopDongCT_DB(ref string err, string MaDoi, string MaCT,
+        public bool ThemHopDongHLV_DB(ref string err, string MaDoi, string MaHLV,
             DateTime NgBatDauHD, string NgKetThucHD, decimal Luong)
         {
-            return dal.MyExecuteNonQuery("sp_Ins_HopDongCT_DB", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Ins_HopDongHLV_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
-                new SqlParameter("@MaCT", MaCT),
+                new SqlParameter("@MaHLV", MaHLV),
                 new SqlParameter("@NgBatDauHD", NgBatDauHD),
                 new SqlParameter("@NgKetThucHD", NgKetThucHD),
                 new SqlParameter("@Luong", Luong));
         }
 
-        public bool XoaHopDongCT_CT(ref string err, string MaDoi, string MaCT, DateTime NgBatDauHD)
+        public bool XoaHopDongHLV_CT(ref string err, string MaDoi, string MaHLV, DateTime NgBatDauHD)
         {
-            return dal.MyExecuteNonQuery("sp_Delete_HopDongCT_DB",
+            return dal.MyExecuteNonQuery("sp_Delete_HopDongHLV_DB",
                 CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
-                new SqlParameter("@MaCT", MaCT),
+                new SqlParameter("@MaHLV", MaHLV),
                 new SqlParameter("@NgBatDauHD", NgBatDauHD));
         }
 
-        public bool CapNhatHopDongCT_DB(ref string err, string MaDoi, string MaCT,
+        public bool CapNhatHopDongHLV_DB(ref string err, string MaDoi, string MaHLV,
             DateTime NgBatDauHD, string NgKetThucHD, decimal Luong)
         {
-            return dal.MyExecuteNonQuery("sp_Update_HopDongCT_DB", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Update_HopDongHLV_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
-                new SqlParameter("@MaCT", MaCT),
+                new SqlParameter("@MaHLV", MaHLV),
                 new SqlParameter("@NgBatDauHD", NgBatDauHD),
                 new SqlParameter("@NgKetThucHD", NgKetThucHD),
                 new SqlParameter("@Luong", Luong));

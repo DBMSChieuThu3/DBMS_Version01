@@ -81,19 +81,19 @@
             this.đổiMậtKhẩuToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // menuStrip1
@@ -126,32 +126,37 @@
             // nhàTàiTrợToolStripMenuItem
             // 
             this.nhàTàiTrợToolStripMenuItem.Name = "nhàTàiTrợToolStripMenuItem";
-            this.nhàTàiTrợToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.nhàTàiTrợToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.nhàTàiTrợToolStripMenuItem.Text = "Nhà tài trợ";
+            this.nhàTàiTrợToolStripMenuItem.Click += new System.EventHandler(this.nhàTàiTrợToolStripMenuItem_Click);
             // 
             // huấnLuyệnViênToolStripMenuItem
             // 
             this.huấnLuyệnViênToolStripMenuItem.Name = "huấnLuyệnViênToolStripMenuItem";
-            this.huấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.huấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.huấnLuyệnViênToolStripMenuItem.Text = "Huấn luyện viên";
+            this.huấnLuyệnViênToolStripMenuItem.Click += new System.EventHandler(this.huấnLuyệnViênToolStripMenuItem_Click);
             // 
             // trợLýToolStripMenuItem
             // 
             this.trợLýToolStripMenuItem.Name = "trợLýToolStripMenuItem";
-            this.trợLýToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.trợLýToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.trợLýToolStripMenuItem.Text = "Trợ lý";
+            this.trợLýToolStripMenuItem.Click += new System.EventHandler(this.trợLýToolStripMenuItem_Click);
             // 
             // cầuThủToolStripMenuItem
             // 
             this.cầuThủToolStripMenuItem.Name = "cầuThủToolStripMenuItem";
-            this.cầuThủToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.cầuThủToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.cầuThủToolStripMenuItem.Text = "Cầu thủ";
+            this.cầuThủToolStripMenuItem.Click += new System.EventHandler(this.cầuThủToolStripMenuItem_Click);
             // 
             // tuổiToolStripMenuItem
             // 
             this.tuổiToolStripMenuItem.Name = "tuổiToolStripMenuItem";
-            this.tuổiToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.tuổiToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tuổiToolStripMenuItem.Text = "Tuổi";
+            this.tuổiToolStripMenuItem.Click += new System.EventHandler(this.tuổiToolStripMenuItem_Click);
             // 
             // hợpĐồngToolStripMenuItem
             // 
@@ -161,49 +166,53 @@
             this.trợLýĐộiBóngToolStripMenuItem,
             this.cầuThủĐộiBóngToolStripMenuItem});
             this.hợpĐồngToolStripMenuItem.Name = "hợpĐồngToolStripMenuItem";
-            this.hợpĐồngToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.hợpĐồngToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.hợpĐồngToolStripMenuItem.Text = "Hợp đồng";
             // 
             // nhàTàiTrợĐộiBóngToolStripMenuItem
             // 
             this.nhàTàiTrợĐộiBóngToolStripMenuItem.Name = "nhàTàiTrợĐộiBóngToolStripMenuItem";
-            this.nhàTàiTrợĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.nhàTàiTrợĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.nhàTàiTrợĐộiBóngToolStripMenuItem.Text = "Nhà tài trợ - Đội bóng";
+            this.nhàTàiTrợĐộiBóngToolStripMenuItem.Click += new System.EventHandler(this.nhàTàiTrợĐộiBóngToolStripMenuItem_Click);
             // 
             // huấnLuyệnViênĐộiBóngToolStripMenuItem
             // 
             this.huấnLuyệnViênĐộiBóngToolStripMenuItem.Name = "huấnLuyệnViênĐộiBóngToolStripMenuItem";
-            this.huấnLuyệnViênĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.huấnLuyệnViênĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.huấnLuyệnViênĐộiBóngToolStripMenuItem.Text = "Huấn luyện viên - Đội bóng ";
+            this.huấnLuyệnViênĐộiBóngToolStripMenuItem.Click += new System.EventHandler(this.huấnLuyệnViênĐộiBóngToolStripMenuItem_Click);
             // 
             // trợLýĐộiBóngToolStripMenuItem
             // 
             this.trợLýĐộiBóngToolStripMenuItem.Name = "trợLýĐộiBóngToolStripMenuItem";
-            this.trợLýĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.trợLýĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.trợLýĐộiBóngToolStripMenuItem.Text = "Trợ lý - Đội bóng";
+            this.trợLýĐộiBóngToolStripMenuItem.Click += new System.EventHandler(this.trợLýĐộiBóngToolStripMenuItem_Click);
             // 
             // cầuThủĐộiBóngToolStripMenuItem
             // 
             this.cầuThủĐộiBóngToolStripMenuItem.Name = "cầuThủĐộiBóngToolStripMenuItem";
-            this.cầuThủĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.cầuThủĐộiBóngToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.cầuThủĐộiBóngToolStripMenuItem.Text = "Cầu thủ - Đội bóng";
+            this.cầuThủĐộiBóngToolStripMenuItem.Click += new System.EventHandler(this.cầuThủĐộiBóngToolStripMenuItem_Click);
             // 
             // traCứuToolStripMenuItem
             // 
             this.traCứuToolStripMenuItem.Name = "traCứuToolStripMenuItem";
-            this.traCứuToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.traCứuToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.traCứuToolStripMenuItem.Text = "Tra cứu";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             // 
             // btnNtt
@@ -214,6 +223,7 @@
             this.btnNtt.TabIndex = 1;
             this.btnNtt.Text = "Nhà tài trợ";
             this.btnNtt.UseVisualStyleBackColor = true;
+            this.btnNtt.Click += new System.EventHandler(this.btnNtt_Click);
             // 
             // label1
             // 
@@ -233,6 +243,7 @@
             this.btnHlv.TabIndex = 3;
             this.btnHlv.Text = "Huấn luyện viên";
             this.btnHlv.UseVisualStyleBackColor = true;
+            this.btnHlv.Click += new System.EventHandler(this.btnHlv_Click);
             // 
             // btnTl
             // 
@@ -242,6 +253,7 @@
             this.btnTl.TabIndex = 4;
             this.btnTl.Text = "Trợ lý";
             this.btnTl.UseVisualStyleBackColor = true;
+            this.btnTl.Click += new System.EventHandler(this.btnTl_Click);
             // 
             // btnCt
             // 
@@ -251,6 +263,7 @@
             this.btnCt.TabIndex = 5;
             this.btnCt.Text = "Cầu thủ";
             this.btnCt.UseVisualStyleBackColor = true;
+            this.btnCt.Click += new System.EventHandler(this.btnCt_Click);
             // 
             // btnTuoi
             // 
@@ -260,6 +273,7 @@
             this.btnTuoi.TabIndex = 6;
             this.btnTuoi.Text = "Tuổi";
             this.btnTuoi.UseVisualStyleBackColor = true;
+            this.btnTuoi.Click += new System.EventHandler(this.btnTuoi_Click);
             // 
             // label2
             // 
@@ -279,6 +293,7 @@
             this.btnNtt_Db.TabIndex = 8;
             this.btnNtt_Db.Text = "Nhà tài trợ - Đội bóng";
             this.btnNtt_Db.UseVisualStyleBackColor = true;
+            this.btnNtt_Db.Click += new System.EventHandler(this.btnNtt_Db_Click);
             // 
             // btnHlv_Db
             // 
@@ -288,6 +303,7 @@
             this.btnHlv_Db.TabIndex = 9;
             this.btnHlv_Db.Text = "Huấn luyện viên - Đội bóng";
             this.btnHlv_Db.UseVisualStyleBackColor = true;
+            this.btnHlv_Db.Click += new System.EventHandler(this.btnHlv_Db_Click);
             // 
             // btnTl_Db
             // 
@@ -297,6 +313,7 @@
             this.btnTl_Db.TabIndex = 10;
             this.btnTl_Db.Text = "Trợ lý - Đội bóng";
             this.btnTl_Db.UseVisualStyleBackColor = true;
+            this.btnTl_Db.Click += new System.EventHandler(this.btnTl_Db_Click);
             // 
             // btnCt_Db
             // 
@@ -306,6 +323,7 @@
             this.btnCt_Db.TabIndex = 11;
             this.btnCt_Db.Text = "Cầu thủ - Đội bóng";
             this.btnCt_Db.UseVisualStyleBackColor = true;
+            this.btnCt_Db.Click += new System.EventHandler(this.btnCt_Db_Click);
             // 
             // panel1
             // 
