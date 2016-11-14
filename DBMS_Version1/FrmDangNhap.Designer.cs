@@ -75,7 +75,7 @@
             // 
             this.btnCancel.Location = new System.Drawing.Point(102, 112);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(75, 31);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // 
             this.btnOK.Location = new System.Drawing.Point(13, 112);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(75, 31);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "Đăng nhập";
             this.btnOK.UseVisualStyleBackColor = true;
