@@ -9,7 +9,7 @@ namespace DataAccessLayer
 {
     public class DALayer
     {
-        string ConnStr = "Data Source=DESKTOP-2A056F7;Initial Catalog=QLNhanSuCLB_2;Integrated Security=True";
+        string ConnStr = "Data Source=DATNGUYEN/SQLEXPRESS;Initial Catalog=QLNhanSuCLB_2;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand cmd = null;
         SqlDataAdapter da = null;

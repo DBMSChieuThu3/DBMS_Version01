@@ -13,7 +13,7 @@ namespace DBMS_Version1
 {
     public partial class FrmCauThu : Form
     {
-        BussinessCauThu ctBussiness = new BussinessCauThu();
+        //BussinessCauThu ctBussiness = new BussinessCauThu();
         bool them = true;
         public FrmCauThu()
         {
@@ -25,7 +25,7 @@ namespace DBMS_Version1
             try
             {
                 //Dua du lieu SQL len dgv
-                dgvCT.DataSource = ctBussiness.getCauThu();
+                //dgvCT.DataSource = ctBussiness.getCauThu();
                 //Thay doi do rong cot
                 dgvCT.AutoResizeColumns();
                 // Xoa trong cac doi tuong trong Panel

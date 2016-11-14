@@ -256,6 +256,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmNhaTaiTro";
             this.Text = "FrmNhaTaiTro";
+            this.Load += new System.EventHandler(this.FrmNhaTaiTro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNTT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

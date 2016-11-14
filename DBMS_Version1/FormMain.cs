@@ -14,6 +14,8 @@ namespace DBMS_Version1
     {
         public FormMain()
         {
+            FrmDangNhap form = new FrmDangNhap();
+            form.ShowDialog();
             InitializeComponent();
         }
 
