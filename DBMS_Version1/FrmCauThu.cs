@@ -13,94 +13,75 @@ namespace DBMS_Version1
 {
     public partial class FrmCauThu : Form
     {
-        //BussinessCauThu ctBussiness = new BussinessCauThu();
-        bool them = true;
+        BussinessCauThu bact = new BussinessCauThu();
+        Bus
+        //Khai báo ds cầu thủ
+        DataTable dsct = new DataTable();
         public FrmCauThu()
         {
             
             InitializeComponent();
         }
-        void LoadData()
+        void DataBind()
         {
-            try
-            {
-                //Dua du lieu SQL len dgv
-                //dgvCT.DataSource = ctBussiness.getCauThu();
-                //Thay doi do rong cot
-                dgvCT.AutoResizeColumns();
-                // Xoa trong cac doi tuong trong Panel
-                this.txtMCT.ResetText();
-                this.txtTCT.ResetText();
-                this.NgaySinh.ResetText();
-                this.txtDC.ResetText();
-                this.txtSDT.ResetText();
-                this.cmbVTST.ResetText();
-                //khong cho thao tac tren cac nut Luu/Huy
-                this.btnLuu.Enabled = false;
-                
-                //Cho cac thoa tac tren cac nut them/sua/xoa/Thoat
-                this.btnThem.Enabled = true;
-                this.btnSua.Enabled = true;
-                this.btnLuu.Enabled = true;
-                this.btnXoa.Enabled = true;
-                dgvCT_CellContentClick(null,null);
-            }
-            catch(SqlException)
-            {
-                MessageBox.Show("Không lấy được nội dung trong table Cầu thủ");
-            }
-        }
-        
-        private void dgvCT_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            LoadData();
+            dsct = bact.getCauThu().Tables[0];
+
+            dgvCT.DataSource = dsct;
+            //Load dữ liệu lên Vị trí sở trường
+            //
+
+            txtMCT.DataBindings.Clear();
+            txtTCT.DataBindings.Clear();
+            NgaySinh.DataBindings.Clear();
+            txtDC.DataBindings.Clear();
+            txtSDT.DataBindings.Clear();
+
+            //binding
+            txtMCT.DataBindings.Add("Text", dsct, "MaCT");
+            txtTCT.DataBindings.Add("Text", dsct, "TenCT");
+            NgaySinh.DataBindings.Add("Text", dsct, "NgSinh");
+            txtDC.DataBindings.Add("Text", dsct, "DiaChi");
+            txtSDT.DataBindings.Add("Text", dsct, "SoDT");
+
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //Kich hoat bien them
-            them = true;
-            //Xoa trong cac doi tuong
-            this.txtMCT.ResetText();
-            this.txtTCT.ResetText();
-            this.NgaySinh.ResetText();
-            this.txtDC.ResetText();
-            this.txtSDT.ResetText();
-            this.cmbVTST.ResetText();
-            // Cho cac thao tac tren cac nut Luu/huy
-            this.btnLuu.Enabled = true;
-            //khong cho cac thao tac tren cac nut con lai
-            this.btnExit.Enabled = false;
-            this.btnLuu.Enabled = false;
-            this.btnReset.Enabled = false;
-            this.btnSua.Enabled = false;
-            //Dua con tro chuot toi vi tri MaCT
-            this.txtMCT.Focus();
+            string err = "";
+            if (!bact.ThemCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
+                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), ""))
+                MessageBox.Show(err);
+            else DataBind();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            string err = "";
+            if (!bact.CapNhatCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
+                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), ""))
+                MessageBox.Show(err);
+            else DataBind();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            string err = "";
+            if (!bact.XoaCauThu(ref err, txtMCT.Text.Trim()))
+                MessageBox.Show(err);
+            else DataBind();
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Dispose();
+        }
 
+        private void FrmCauThu_Load(object sender, EventArgs e)
+        {
+            DataBind();
         }
     }
 }

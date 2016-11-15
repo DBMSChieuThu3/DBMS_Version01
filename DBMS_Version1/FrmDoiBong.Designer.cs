@@ -257,6 +257,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmDoiBong";
             this.Text = "FrmDoiBong";
+            this.Load += new System.EventHandler(this.FrmDoiBong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

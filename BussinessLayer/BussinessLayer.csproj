@@ -52,6 +52,7 @@
     <Compile Include="BussinessHopDongNTT_DB.cs" />
     <Compile Include="BussinessHopDongTL_DB.cs" />
     <Compile Include="BussinessNhaTaiTro.cs" />
+    <Compile Include="BussinessViTriSoTruong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BussinessTroLy.cs" />
     <Compile Include="BussinessTuoi.cs" />

@@ -10,7 +10,7 @@ namespace BussinessLayer
 {
     public class BussinessDoiBong
     {
-        DALayer dal = null;
+        DALayer dal ;
         public BussinessDoiBong()
         {
             dal = new DALayer();

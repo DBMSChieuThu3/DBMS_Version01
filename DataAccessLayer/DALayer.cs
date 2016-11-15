@@ -9,7 +9,8 @@ namespace DataAccessLayer
 {
     public class DALayer
     {
-        string ConnStr = "Data Source=DATNGUYEN/SQLEXPRESS;Initial Catalog=QLNhanSuCLB_2;Integrated Security=True";
+        string ConnStr = @"Data Source = (local)\SQLEXPRESS;" +
+                "Initial Catalog  = QLNhanSuCLB_2; Integrated Security = True";
         SqlConnection conn = null;
         SqlCommand cmd = null;
         SqlDataAdapter da = null;
@@ -17,6 +18,9 @@ namespace DataAccessLayer
         public DALayer()
         {
             conn = new SqlConnection(ConnStr);
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
             cmd = conn.CreateCommand();
         }
 

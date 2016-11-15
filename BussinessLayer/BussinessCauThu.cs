@@ -11,7 +11,7 @@ namespace BussinessLayer
 {
     public class BussinessCauThu
     {
-        DALayer dal = null;
+        DALayer dal;
         public BussinessCauThu()
         {
             dal = new DALayer();
@@ -32,7 +32,7 @@ namespace BussinessLayer
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
                 new SqlParameter("@SoDT", SoDT),
-                new SqlParameter("@ViTriST", ViTriST));
+                new SqlParameter("@MaVT", ViTriST));
         }
 
         public bool XoaCauThu(ref string err, string MaCT)
@@ -51,7 +51,7 @@ namespace BussinessLayer
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
                 new SqlParameter("@SoDT", SoDT),
-                new SqlParameter("@ViTriST", ViTriST));
+                new SqlParameter("@MaVT", ViTriST));
         }
 
     }

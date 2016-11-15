@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCauThu));
             this.cmbVTST = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -72,21 +71,6 @@
             this.label9.TabIndex = 83;
             this.label9.Text = "Vị trí sở trường";
             // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuu.Location = new System.Drawing.Point(249, 442);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(88, 38);
-            this.btnLuu.TabIndex = 82;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -105,20 +89,19 @@
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(468, 442);
+            this.btnReset.Location = new System.Drawing.Point(601, 442);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(88, 38);
             this.btnReset.TabIndex = 80;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Location = new System.Drawing.Point(358, 442);
+            this.btnXoa.Location = new System.Drawing.Point(249, 442);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(88, 38);
             this.btnXoa.TabIndex = 79;
@@ -172,7 +155,6 @@
             this.dgvCT.Name = "dgvCT";
             this.dgvCT.Size = new System.Drawing.Size(766, 231);
             this.dgvCT.TabIndex = 75;
-            this.dgvCT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCT_CellContentClick);
             // 
             // txtSDT
             // 
@@ -284,7 +266,6 @@
             this.ClientSize = new System.Drawing.Size(799, 487);
             this.Controls.Add(this.cmbVTST);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnXoa);
@@ -306,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCauThu";
             this.Text = "FrmCauThu";
+            this.Load += new System.EventHandler(this.FrmCauThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,7 +298,6 @@
 
         private System.Windows.Forms.ComboBox cmbVTST;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnXoa;
