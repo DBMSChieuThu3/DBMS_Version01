@@ -14,7 +14,7 @@ namespace DBMS_Version1
     public partial class FrmDoiBong : Form
     {
         BussinessDoiBong badb = new BussinessDoiBong();
-        
+        Bus
         DataTable dsdb = new DataTable();
 
         public FrmDoiBong()
