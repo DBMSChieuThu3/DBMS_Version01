@@ -9,9 +9,9 @@ using System.Data.SqlClient;
 
 namespace BussinessLayer
 {
-    class BussinessViTriSoTruong
+    public class BussinessViTriSoTruong
     {
-        DALayer dal = null;
+        DALayer dal ;
         public BussinessViTriSoTruong()
         {
             dal = new DALayer();

@@ -23,7 +23,7 @@ namespace BussinessLayer
         }
 
         public bool ThemHopDongTL_DB(ref string err, string MaDoi, string MaTL,
-            DateTime NgBatDauHD, string NgKetThucHD, decimal Luong)
+            DateTime NgBatDauHD, DateTime NgKetThucHD, decimal Luong)
         {
             return dal.MyExecuteNonQuery("sp_Ins_HopDongTL_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
@@ -43,7 +43,7 @@ namespace BussinessLayer
         }
 
         public bool CapNhatHopDongTL_DB(ref string err, string MaDoi, string MaTL,
-            DateTime NgBatDauHD, string NgKetThucHD, decimal Luong)
+            DateTime NgBatDauHD, DateTime NgKetThucHD, decimal Luong)
         {
             return dal.MyExecuteNonQuery("sp_Update_HopDongTL_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),

@@ -22,30 +22,30 @@ namespace BussinessLayer
                 CommandType.Text, null);
         }
 
-        public bool ThemDoiBong(ref string err, string MaDB, string TenDB,
+        public bool ThemDoiBong(ref string err, string MaDoi, string TenDoi,
             DateTime NgThanhLap, string MaTuoi)
         {
             return dal.MyExecuteNonQuery("sp_Ins_DB", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaDB", MaDB),
-                new SqlParameter("@TenDB", TenDB),
+                new SqlParameter("@MaDoi", MaDoi),
+                new SqlParameter("@TenDoi", TenDoi),
                 new SqlParameter("@NgThanhLap", NgThanhLap),
                 new SqlParameter("@MaTuoi", MaTuoi));
         }
 
-        public bool XoaDoiBong(ref string err, string MaDB)
+        public bool XoaDoiBong(ref string err, string MaDoi)
         {
             return dal.MyExecuteNonQuery("sp_Delete_DB",
                 CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaDB", MaDB));
+                new SqlParameter("@MaDoi", MaDoi));
         }
 
-        public bool CapNhatDoiBong(ref string err, string MaDB, string TenDB,
+        public bool CapNhatDoiBong(ref string err, string MaDoi, string TenDoi,
             DateTime NgThanhLap, string MaTuoi)
         {
             return dal.MyExecuteNonQuery("sp_Update_DB", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaDB", MaDB),
-                new SqlParameter("@TenDB", TenDB),
-                new SqlParameter("@NgThanhLap", NgThanhLap),
+                new SqlParameter("@MaDoi", MaDoi),
+                new SqlParameter("@TenDoi", TenDoi),
+                new SqlParameter("@NgayThanhLap", NgThanhLap),
                 new SqlParameter("@MaTuoi", MaTuoi));
         }
     }

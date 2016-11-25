@@ -15,21 +15,68 @@ namespace DBMS_Version1
 {
     public partial class FrmNhaTaiTro : Form
     {
-        BussinessNhaTaiTro db = new BussinessNhaTaiTro();
-        DataSet dsNTT = new DataSet();
+        BussinessNhaTaiTro bantt = new BussinessNhaTaiTro();
+        DataTable dsNTT = new DataTable();
         public FrmNhaTaiTro()
         {
             InitializeComponent();
         }
-        public void DanhSachNTT()
+        public void DataBind()
         {
-            dsNTT = db.getNhaTaiTro();
-            dgvNTT.DataSource = dsNTT.Tables[0];
+            dsNTT = bantt.getNhaTaiTro().Tables[0];
+
+
+            //Load len data grid
+            dgvNTT.DataSource = dsNTT;
+
+
+            //clear binding
+            txtMNTT.DataBindings.Clear();
+            txtTNTT.DataBindings.Clear();
+            txtDC.DataBindings.Clear();
+            txtSDT.DataBindings.Clear();
+
+            //
+            txtMNTT.DataBindings.Add("Text", dsNTT, "MaNTT");
+            txtTNTT.DataBindings.Add("Text", dsNTT, "TenNTT");
+            txtDC.DataBindings.Add("Text", dsNTT, "DiaChi");
+            txtSDT.DataBindings.Add("Text", dsNTT, "SoDT");
         }
 
         private void FrmNhaTaiTro_Load(object sender, EventArgs e)
         {
-            DanhSachNTT();
+            DataBind();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            if (!bantt.ThemNhaTaiTro(ref err, txtMNTT.Text.Trim(), txtTNTT.Text.Trim(),
+                txtDC.Text.Trim(), txtSDT.Text.Trim()))
+                MessageBox.Show(err);
+            else DataBind();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            if (!bantt.CapNhatNTT(ref err, txtMNTT.Text.Trim(), txtTNTT.Text.Trim(),
+                txtDC.Text.Trim(), txtSDT.Text.Trim()))
+                MessageBox.Show(err);
+            else DataBind();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            if (!bantt.XoaNhaTaiTro(ref err, txtMNTT.Text.Trim()))
+                MessageBox.Show(err);
+            else DataBind();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

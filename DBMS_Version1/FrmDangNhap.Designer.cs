@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDatabase = new System.Windows.Forms.TextBox();
+            this.txtServer = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -44,6 +48,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtDatabase);
+            this.panel1.Controls.Add(this.txtServer);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.btnCancel);
@@ -52,12 +60,48 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(485, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 170);
+            this.panel1.Size = new System.Drawing.Size(192, 244);
             this.panel1.TabIndex = 3;
+            // 
+            // txtDatabase
+            // 
+            this.txtDatabase.Location = new System.Drawing.Point(10, 84);
+            this.txtDatabase.Name = "txtDatabase";
+            this.txtDatabase.Size = new System.Drawing.Size(164, 20);
+            this.txtDatabase.TabIndex = 3;
+            this.txtDatabase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDatabase_KeyPress);
+            // 
+            // txtServer
+            // 
+            this.txtServer.Location = new System.Drawing.Point(10, 36);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(164, 20);
+            this.txtServer.TabIndex = 2;
+            this.txtServer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtServer_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 23);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Database";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 23);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Server:";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(13, 86);
+            this.txtPass.Location = new System.Drawing.Point(10, 176);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(164, 20);
             this.txtPass.TabIndex = 5;
@@ -65,7 +109,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(13, 38);
+            this.txtID.Location = new System.Drawing.Point(10, 128);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(164, 20);
             this.txtID.TabIndex = 4;
@@ -73,43 +117,43 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(102, 112);
+            this.btnCancel.Location = new System.Drawing.Point(99, 202);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 31);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Thoát";
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Exit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(13, 112);
+            this.btnOK.Location = new System.Drawing.Point(18, 202);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 31);
-            this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "Đăng nhập";
+            this.btnOK.TabIndex = 6;
+            this.btnOK.Text = "Login";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 61);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu:";
+            this.label2.Text = "Password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 13);
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 22);
+            this.label1.Size = new System.Drawing.Size(63, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên đăng nhập:";
+            this.label1.Text = "Login:";
             // 
             // label4
             // 
@@ -177,5 +221,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtDatabase;
+        private System.Windows.Forms.TextBox txtServer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

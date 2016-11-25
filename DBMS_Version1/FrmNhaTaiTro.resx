@@ -118,21 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAf9JREFUOE+lkk9IFHEUx+cU5K1L0dFb5C0IokvhIYgWOnip6BpiEIkihLGppZew
-        DNMWEYqElLIo+oNie1gPiq5s7bq6bsvutttsOzu7Lo5rllb0bb9v+M0qgof6wYf3ZnjvM+/NjPbfJ/La
-        g5h/BL+sqMOmZeDPRsHm97edlO8bcT96brqhpScGsB7pl0ZTj6GoBwXmeSPlRFIwM8LPtWVYiSncuNoA
-        LevtRSnYjY18CN/NeYcfq1msmQmJQiknjSo6gs9jvViZ7RCBlQnJ0/PJOWcKuf6akFxNwxWL4XG0NZYF
-        ybc9KPhasJ6e3ibgjiQTD22DMk5GgUxAQW6sXgRb4YhKqmAj4YqFwAtbEHvaAX30nEyxPHN/B8W5QVjz
-        I1hdfIlSbFxgnp8arAhSQ65dSQ/XyZTGxHWYk7eR8z2A4e223wEFn/pOIe45iei944gP1DrXzNU9FZMP
-        zyA5dB6ROydsQfSJG9G7R7FUhkX6q2Z8eX5ZYL4VNrKOfGw7ZAvCj1ux0Fkj0MpvzAk4InN+MkbCvVVt
-        oOmgLVh6dA3B1mphofOIFFKkv7nlCDZXsgJ3V7WzVw7YAh7fxSoxBt2HpSncdUwEqpF/IiP/WtaR6Uv7
-        KgKed2f34P2F/ciFJ+Fvd4GrZT54hVTAZsbTjGeuvRg+XSW0tzRWBP92NO0vVRvAWLpSSJwAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -146,4 +131,16 @@
         mf+HwOoaRs9hB8wOI2v798I47h0Afy3e+tbT2wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="MaNTT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TenNTT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DiaChi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SoDT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

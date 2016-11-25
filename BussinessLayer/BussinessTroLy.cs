@@ -35,7 +35,7 @@ namespace BussinessLayer
 
         public bool XoaTroLi(ref string err, string MaTL)
         {
-            return dal.MyExecuteNonQuery("sp_Delete_TL",
+            return dal.MyExecuteNonQuery("sp_Delete_TroLi",
                 CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaTL", MaTL));
         }

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using DataAccessLayer;
 namespace BussinessLayer
 {
-    class BussinessHopDongNTT_DB
+    public class BussinessHopDongNTT_DB
     {
         DALayer dal = null;
         public BussinessHopDongNTT_DB()
@@ -23,7 +23,7 @@ namespace BussinessLayer
         }
 
         public bool ThemHopDongNTT_DB(ref string err, string MaDoi, string MaNTT,
-            DateTime NgBatDauHD, string NgKetThucHD, decimal TienTaiTro)
+            DateTime NgBatDauHD, DateTime NgKetThucHD, decimal TienTaiTro)
         {
             return dal.MyExecuteNonQuery("sp_Ins_HopDongNTT_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
@@ -43,7 +43,7 @@ namespace BussinessLayer
         }
 
         public bool CapNhatHopDongNTT_DB(ref string err, string MaDoi, string MaNTT,
-            DateTime NgBatDauHD, string NgKetThucHD, decimal TienTaiTro)
+            DateTime NgBatDauHD, DateTime NgKetThucHD, decimal TienTaiTro)
         {
             return dal.MyExecuteNonQuery("sp_Update_HopDongNTT_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),

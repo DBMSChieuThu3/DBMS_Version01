@@ -15,12 +15,6 @@ namespace DBMS_Version1
 {
     public partial class FrmDangNhap : Form
     {
-        //Tạo tài khoản đăng nhập mặc định
-        public string ID = "admin";
-        public string Pass = "admin";
-
-        
-
         
         public FrmDangNhap()
         {
@@ -35,27 +29,7 @@ namespace DBMS_Version1
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == ID && txtPass.Text == Pass)
-            {
-                MessageBox.Show("Ban đã đăng nhập thành công!");
-                Close();
-            }
-            else
-            {
-                if (txtID.Text != ID)
-                {
-                    MessageBox.Show("Sai tên truy cập!");
-                    txtID.Focus();
-                }
-                else
-                {
-                    if (txtPass.Text != Pass)
-                    {
-                        MessageBox.Show("Sai Mật khẩu!");
-                        txtPass.Focus();
-                    }
-                }
-            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -73,6 +47,18 @@ namespace DBMS_Version1
         {
             if (e.KeyChar == 13)
                 btnOK.PerformClick();
+        }
+
+        private void txtServer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                txtDatabase.Focus();
+        }
+
+        private void txtDatabase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                txtID.Focus();
         }
     }
 }

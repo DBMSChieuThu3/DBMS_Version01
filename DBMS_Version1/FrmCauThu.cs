@@ -14,9 +14,11 @@ namespace DBMS_Version1
     public partial class FrmCauThu : Form
     {
         BussinessCauThu bact = new BussinessCauThu();
-        Bus
+        BussinessViTriSoTruong bavt = new BussinessViTriSoTruong();
         //Khai báo ds cầu thủ
         DataTable dsct = new DataTable();
+        DataTable dsvt = new DataTable();
+        
         public FrmCauThu()
         {
             
@@ -25,32 +27,44 @@ namespace DBMS_Version1
         void DataBind()
         {
             dsct = bact.getCauThu().Tables[0];
+            dsvt = bavt.getViTriSoTruong().Tables[0];
+
+            MaVT.DataSource = dsvt;
+            MaVT.DisplayMember = "TenViTri";
+            MaVT.ValueMember = "MaVT";
 
             dgvCT.DataSource = dsct;
             //Load dữ liệu lên Vị trí sở trường
-            //
+           
+
 
             txtMCT.DataBindings.Clear();
             txtTCT.DataBindings.Clear();
             NgaySinh.DataBindings.Clear();
             txtDC.DataBindings.Clear();
             txtSDT.DataBindings.Clear();
+            cmbVTST.DataBindings.Clear();
 
+           
             //binding
             txtMCT.DataBindings.Add("Text", dsct, "MaCT");
             txtTCT.DataBindings.Add("Text", dsct, "TenCT");
             NgaySinh.DataBindings.Add("Text", dsct, "NgSinh");
             txtDC.DataBindings.Add("Text", dsct, "DiaChi");
             txtSDT.DataBindings.Add("Text", dsct, "SoDT");
-
             
+            //Load dữ liệu lên Vị trí sở trường
+            cmbVTST.DataSource = dsvt;
+            cmbVTST.DisplayMember = "TenViTri";
+            cmbVTST.ValueMember = "MaVT";
+            cmbVTST.DataBindings.Add("SelectedValue", dsct, "MaVT");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
             if (!bact.ThemCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
-                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), ""))
+                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), cmbVTST.SelectedValue.ToString()))
                 MessageBox.Show(err);
             else DataBind();
         }
@@ -59,7 +73,7 @@ namespace DBMS_Version1
         {
             string err = "";
             if (!bact.CapNhatCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
-                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), ""))
+                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), cmbVTST.SelectedValue.ToString()))
                 MessageBox.Show(err);
             else DataBind();
         }
@@ -80,6 +94,11 @@ namespace DBMS_Version1
         }
 
         private void FrmCauThu_Load(object sender, EventArgs e)
+        {
+            DataBind();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             DataBind();
         }
