@@ -69,6 +69,7 @@
             this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(164, 20);
             this.txtDatabase.TabIndex = 3;
+            this.txtDatabase.Text = "QLNhanSuCLB_2";
             this.txtDatabase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDatabase_KeyPress);
             // 
             // txtServer
@@ -77,6 +78,7 @@
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(164, 20);
             this.txtServer.TabIndex = 2;
+            this.txtServer.Text = "(local)\\SQLExpress";
             this.txtServer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtServer_KeyPress);
             // 
             // label5

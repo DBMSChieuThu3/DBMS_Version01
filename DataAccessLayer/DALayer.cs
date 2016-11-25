@@ -62,6 +62,20 @@ namespace DataAccessLayer
             }
             return f;
         }
+        public bool CheckConnect(string connectString)
+        {
+            try
+            {
+                SqlConnection connect = new SqlConnection(connectString);
+                connect.Open();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
 

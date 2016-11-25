@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DataAccessLayer;
+using DataTransfer;
 using BussinessLayer;
 
 namespace DBMS_Version1
@@ -29,7 +30,24 @@ namespace DBMS_Version1
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-
+            DALayer da = new DALayer();
+            string ChuoiKn = "data source=" + txtServer.Text + ";";
+            ChuoiKn += "initial catalog=" + txtDatabase.Text + ";";
+            ChuoiKn += "user id =" + txtID.Text + ";" + "password=" + txtPass.Text + ";";
+            da.CheckConnect(ChuoiKn);
+            if (da.CheckConnect(ChuoiKn) == true)
+            {
+                MessageBox.Show("Kết nối thành công", "Thông báo!");
+                dtLayer.ID = txtID.Text;
+                dtLayer.password = txtPass.Text;
+                dtLayer.datasource = txtServer.Text;
+                dtLayer.database = txtDatabase.Text;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Kết nối thất bại", "Lỗi!");
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

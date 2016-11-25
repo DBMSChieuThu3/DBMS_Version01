@@ -16,7 +16,7 @@ namespace DBMS_Version1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNhaTaiTro());
+            Application.Run(new FormMain());
         }
     }
 }
