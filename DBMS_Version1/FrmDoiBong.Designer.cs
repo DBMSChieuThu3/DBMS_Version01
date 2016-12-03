@@ -36,6 +36,10 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDB = new System.Windows.Forms.DataGridView();
+            this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayThanhLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTuoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.NgayTL = new System.Windows.Forms.DateTimePicker();
             this.txtTDB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
-            this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayThanhLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTuoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +138,32 @@
             this.dgvDB.Name = "dgvDB";
             this.dgvDB.Size = new System.Drawing.Size(447, 231);
             this.dgvDB.TabIndex = 94;
+            // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.HeaderText = "Mã Đội";
+            this.MaDoi.Name = "MaDoi";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.DataPropertyName = "TenDoi";
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // NgayThanhLap
+            // 
+            this.NgayThanhLap.DataPropertyName = "NgayThanhLap";
+            this.NgayThanhLap.HeaderText = "Ngày Thành Lập";
+            this.NgayThanhLap.Name = "NgayThanhLap";
+            // 
+            // MaTuoi
+            // 
+            this.MaTuoi.DataPropertyName = "MaTuoi";
+            this.MaTuoi.HeaderText = "Lứa Tuổi";
+            this.MaTuoi.Name = "MaTuoi";
+            this.MaTuoi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaTuoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // NgayTL
             // 
@@ -228,37 +254,11 @@
             this.btnReset.Text = "reset";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.HeaderText = "Mã Đội";
-            this.MaDoi.Name = "MaDoi";
-            // 
-            // TenDoi
-            // 
-            this.TenDoi.DataPropertyName = "TenDoi";
-            this.TenDoi.HeaderText = "Tên Đội";
-            this.TenDoi.Name = "TenDoi";
-            // 
-            // NgayThanhLap
-            // 
-            this.NgayThanhLap.DataPropertyName = "NgayThanhLap";
-            this.NgayThanhLap.HeaderText = "Ngày Thành Lập";
-            this.NgayThanhLap.Name = "NgayThanhLap";
-            // 
-            // MaTuoi
-            // 
-            this.MaTuoi.DataPropertyName = "MaTuoi";
-            this.MaTuoi.HeaderText = "Lứa Tuổi";
-            this.MaTuoi.Name = "MaTuoi";
-            this.MaTuoi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaTuoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // FrmDoiBong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 352);
+            this.ClientSize = new System.Drawing.Size(566, 352);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dgvDB);
             this.Controls.Add(this.cmbMT);

@@ -30,7 +30,7 @@ namespace DBMS_Version1
             dsvt = bavt.getViTriSoTruong().Tables[0];
 
             MaVT.DataSource = dsvt;
-            MaVT.DisplayMember = "TenViTri";
+            MaVT.DisplayMember = "TenVT";
             MaVT.ValueMember = "MaVT";
 
             dgvCT.DataSource = dsct;
@@ -42,7 +42,8 @@ namespace DBMS_Version1
             txtTCT.DataBindings.Clear();
             NgaySinh.DataBindings.Clear();
             txtDC.DataBindings.Clear();
-            txtSDT.DataBindings.Clear();
+            txtCao.DataBindings.Clear();
+            txtCanNang.DataBindings.Clear();
             cmbVTST.DataBindings.Clear();
 
            
@@ -51,11 +52,12 @@ namespace DBMS_Version1
             txtTCT.DataBindings.Add("Text", dsct, "TenCT");
             NgaySinh.DataBindings.Add("Text", dsct, "NgSinh");
             txtDC.DataBindings.Add("Text", dsct, "DiaChi");
-            txtSDT.DataBindings.Add("Text", dsct, "SoDT");
-            
+            txtCao.DataBindings.Add("Text", dsct, "Cao");
+            txtCanNang.DataBindings.Add("Text", dsct, "CanNang");
+
             //Load dữ liệu lên Vị trí sở trường
             cmbVTST.DataSource = dsvt;
-            cmbVTST.DisplayMember = "TenViTri";
+            cmbVTST.DisplayMember = "TenVT";
             cmbVTST.ValueMember = "MaVT";
             cmbVTST.DataBindings.Add("SelectedValue", dsct, "MaVT");
         }
@@ -64,7 +66,7 @@ namespace DBMS_Version1
         {
             string err = "";
             if (!bact.ThemCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
-                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), cmbVTST.SelectedValue.ToString()))
+                NgaySinh.Value, txtDC.Text.Trim(),double.Parse(txtCao.Text.Trim()), double.Parse(txtCanNang.Text.Trim()), cmbVTST.SelectedValue.ToString()))
                 MessageBox.Show(err);
             else DataBind();
         }
@@ -73,7 +75,7 @@ namespace DBMS_Version1
         {
             string err = "";
             if (!bact.CapNhatCauThu(ref err, txtMCT.Text.Trim(), txtTCT.Text.Trim(),
-                NgaySinh.Value, txtDC.Text.Trim(), txtSDT.Text.Trim(), cmbVTST.SelectedValue.ToString()))
+                NgaySinh.Value, txtDC.Text.Trim(), double.Parse(txtCao.Text.Trim()), double.Parse(txtCanNang.Text.Trim()), cmbVTST.SelectedValue.ToString()))
                 MessageBox.Show(err);
             else DataBind();
         }

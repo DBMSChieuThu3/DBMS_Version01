@@ -19,7 +19,7 @@ namespace BussinessLayer
 
         public DataSet getViTriSoTruong()
         {
-            return dal.ExecuteQueryDataSet("Select * From ViTriSoTruong ",
+            return dal.ExecuteQueryDataSet("Select * From ViTri ",
                 CommandType.Text, null);
         }
 
@@ -27,7 +27,7 @@ namespace BussinessLayer
         {
             return dal.MyExecuteNonQuery("sp_Ins_ViTri", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaVT", MaVT),
-                new SqlParameter("@TenViTri", TenViTri));
+                new SqlParameter("@TenVT", TenViTri));
         }
 
         public bool XoaLuaTuoi(ref string err, string MaVT)
@@ -41,7 +41,7 @@ namespace BussinessLayer
         {
             return dal.MyExecuteNonQuery("sp_Update_ViTri", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaVT", MaVT),
-                new SqlParameter("@TenViTri", TenViTri));
+                new SqlParameter("@TenVT", TenViTri));
         }
 
     }

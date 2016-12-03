@@ -12,6 +12,7 @@ namespace BussinessLayer
     public class BussinessCauThu
     {
         DALayer dal;
+        
         public BussinessCauThu()
         {
             dal = new DALayer();
@@ -24,14 +25,15 @@ namespace BussinessLayer
         }
 
         public bool ThemCauThu(ref string err, string MaCT, string TenCT,
-            DateTime NgSinh, string DiaChi, string SoDT, string ViTriST)
+            DateTime NgSinh, string DiaChi,double Cao,double CanNang, string ViTriST)
         {
             return dal.MyExecuteNonQuery("sp_Ins_CT", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaCT", MaCT),
                 new SqlParameter("@TenCT", TenCT),
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
-                new SqlParameter("@SoDT", SoDT),
+                new SqlParameter("@Cao", Cao),
+                new SqlParameter("@CanNang", CanNang),
                 new SqlParameter("@MaVT", ViTriST));
         }
 
@@ -43,14 +45,15 @@ namespace BussinessLayer
         }
 
         public bool CapNhatCauThu(ref string err, string MaCT, string TenCT,
-            DateTime NgSinh, string DiaChi, string SoDT, string ViTriST)
+            DateTime NgSinh, string DiaChi, double Cao, double CanNang, string ViTriST)
         {
-            return dal.MyExecuteNonQuery("sp_Update_CT", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Update_CauThu", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaCT", MaCT),
                 new SqlParameter("@TenCT", TenCT),
                 new SqlParameter("@NgSinh", NgSinh),
                 new SqlParameter("@DiaChi", DiaChi),
-                new SqlParameter("@SoDT", SoDT),
+               new SqlParameter("@Cao", Cao),
+                new SqlParameter("@CanNang", CanNang),
                 new SqlParameter("@MaVT", ViTriST));
         }
 

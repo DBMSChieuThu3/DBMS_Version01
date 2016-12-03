@@ -26,7 +26,7 @@ namespace BussinessLayer
         public bool ThemNhaTaiTro(ref string err, string MaNTT, string TenNTT,
              string DiaChi, string SoDT)
         {
-            return dal.MyExecuteNonQuery("sp_Ins_NTT", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Ins_NhaTaiTro", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaNTT", MaNTT),
                 new SqlParameter("@TenNTT", TenNTT),
                 new SqlParameter("@DiaChi", DiaChi),
@@ -43,7 +43,7 @@ namespace BussinessLayer
         public bool CapNhatNTT(ref string err, string MaNTT, string TenNTT,
              string DiaChi, string SoDT)
         {
-            return dal.MyExecuteNonQuery("sp_Update_NTT", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Update_NhaTaiTro", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaNTT", MaNTT),
                 new SqlParameter("@TenNTT", TenNTT),
                 new SqlParameter("@DiaChi", DiaChi),

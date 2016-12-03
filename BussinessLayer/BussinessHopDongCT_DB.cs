@@ -35,7 +35,7 @@ namespace BussinessLayer
 
         public bool XoaHopDongCT_DB(ref string err, string MaDoi, string MaCT, DateTime NgBatDauHD)
         {
-            return dal.MyExecuteNonQuery("sp_Delete_HopDongCT_DB",
+            return dal.MyExecuteNonQuery("sp_Delete_CT_DB",
                 CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
                 new SqlParameter("@MaCT", MaCT),
@@ -45,7 +45,7 @@ namespace BussinessLayer
         public bool CapNhatHopDongCT_DB(ref string err, string MaDoi, string MaCT,
             DateTime NgBatDauHD, DateTime NgKetThucHD, decimal Luong)
         {
-            return dal.MyExecuteNonQuery("sp_Update_HopDongCT_DB", CommandType.StoredProcedure, ref err,
+            return dal.MyExecuteNonQuery("sp_Update_CT_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
                 new SqlParameter("@MaCT", MaCT),
                 new SqlParameter("@NgBatDauHD", NgBatDauHD),

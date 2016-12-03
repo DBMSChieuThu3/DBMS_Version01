@@ -11,42 +11,42 @@ using BussinessLayer;
 
 namespace DBMS_Version1
 {
-    public partial class FrmHopDongHLV_DB : Form
+    public partial class FrmHopDongBHL_DB : Form
     {
-        BussinessHopDongHLV_DB bahlv_db = new BussinessHopDongHLV_DB();
-        BussinessHLV bahlv = new BussinessHLV();
+        BussinessHopDongBHL_DB baBHL_db = new BussinessHopDongBHL_DB();
+        BussinessBanHL baBHL = new BussinessBanHL();
         BussinessDoiBong badb = new BussinessDoiBong();
         DataTable dshd = new DataTable();
         DataTable dsct = new DataTable();
         DataTable dsdb = new DataTable();
 
-        public FrmHopDongHLV_DB()
+        public FrmHopDongBHL_DB()
         {
             InitializeComponent();
         }
 
         public void DataBind()
         {
-            dshd = bahlv_db.getHopDongHLV_DB().Tables[0];
-            dsct = bahlv.getHLV().Tables[0];
+            dshd = baBHL_db.getHopDongBHL_DB().Tables[0];
+            dsct = baBHL.getBanHL().Tables[0];
             dsdb = badb.getDoiBong().Tables[0];
 
-            MaHLV.DataSource = dsct;
-            MaHLV.DisplayMember = "TenHLV";
-            MaHLV.ValueMember = "MaHLV";
+            MaBHL.DataSource = dsct;
+            MaBHL.DisplayMember = "TenBHL";
+            MaBHL.ValueMember = "MaBHL";
 
             MaDoi.DataSource = dsdb;
             MaDoi.DisplayMember = "TenDoi";
             MaDoi.ValueMember = "MaDoi";
             //Load len data grid
-            dgvHDHLV.DataSource = dshd;
+            dgvHDBHL.DataSource = dshd;
 
 
             //clear binding
             txtLuong.DataBindings.Clear();
             NgayBD.DataBindings.Clear();
             NgayKT.DataBindings.Clear();
-            cmbMaHLV.DataBindings.Clear();
+            cmbMaBHL.DataBindings.Clear();
             cmbMaDoi.DataBindings.Clear();
             //
 
@@ -60,12 +60,12 @@ namespace DBMS_Version1
             cmbMaDoi.ValueMember = "MaDoi";
             cmbMaDoi.DataBindings.Add("SelectedValue", dshd, "MaDoi");
 
-            cmbMaHLV.DataSource = dsct;
-            cmbMaHLV.DisplayMember = "TenHLV";
-            cmbMaHLV.ValueMember = "MaHLV";
-            cmbMaHLV.DataBindings.Add("SelectedValue", dshd, "MaHLV");
+            cmbMaBHL.DataSource = dsct;
+            cmbMaBHL.DisplayMember = "TenBHL";
+            cmbMaBHL.ValueMember = "MaBHL";
+            cmbMaBHL.DataBindings.Add("SelectedValue", dshd, "MaBHL");
         }
-        private void FrmHopDongHLV_DB_Load(object sender, EventArgs e)
+        private void FrmHopDongBHL_DB_Load(object sender, EventArgs e)
         {
 
             DataBind();
@@ -74,7 +74,7 @@ namespace DBMS_Version1
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bahlv_db.ThemHopDongHLV_DB(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaHLV.SelectedValue.ToString(),
+            if (!baBHL_db.ThemHopDongBHL_DB(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaBHL.SelectedValue.ToString(),
                 NgayBD.Value, NgayKT.Value, decimal.Parse(txtLuong.Text.Trim())))
                 MessageBox.Show(err);
             else DataBind();
@@ -83,7 +83,7 @@ namespace DBMS_Version1
         private void btnSua_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bahlv_db.CapNhatHopDongHLV_DB(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaHLV.SelectedValue.ToString(),
+            if (!baBHL_db.CapNhatHopDongBHL_DB(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaBHL.SelectedValue.ToString(),
           NgayBD.Value, NgayKT.Value, decimal.Parse(txtLuong.Text.Trim())))
                 MessageBox.Show(err);
             else DataBind();
@@ -92,7 +92,7 @@ namespace DBMS_Version1
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bahlv_db.XoaHopDongHLV_CT(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaHLV.SelectedValue.ToString(), NgayBD.Value))
+            if (!baBHL_db.XoaHopDongBHL_DB(ref err, cmbMaDoi.SelectedValue.ToString(), cmbMaBHL.SelectedValue.ToString(), NgayBD.Value))
                 MessageBox.Show(err);
             else DataBind();
         }

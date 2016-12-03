@@ -61,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoiBong\ChonDoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiBong\ChonDoi.Designer.cs">
+      <DependentUpon>ChonDoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoiBong\Quanlydoibong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiBong\Quanlydoibong.Designer.cs">
+      <DependentUpon>Quanlydoibong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="FrmCauThu.Designer.cs">
       <DependentUpon>FrmCauThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCuoiKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCuoiKy.Designer.cs">
+      <DependentUpon>FrmCuoiKy.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDangNhap.cs">
       <SubType>Form</SubType>
@@ -91,11 +109,11 @@
     <Compile Include="FrmHopDongCT_DB.Designer.cs">
       <DependentUpon>FrmHopDongCT_DB.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHopDongHLV_DB.cs">
+    <Compile Include="FrmHopDongBHL_DB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHopDongHLV_DB.Designer.cs">
-      <DependentUpon>FrmHopDongHLV_DB.cs</DependentUpon>
+    <Compile Include="FrmHopDongBHL_DB.Designer.cs">
+      <DependentUpon>FrmHopDongBHL_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHopDongNTT_DB.cs">
       <SubType>Form</SubType>
@@ -103,17 +121,11 @@
     <Compile Include="FrmHopDongNTT_DB.Designer.cs">
       <DependentUpon>FrmHopDongNTT_DB.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHopDongTL_DB.cs">
+    <Compile Include="FrmBanHuanLuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHopDongTL_DB.Designer.cs">
-      <DependentUpon>FrmHopDongTL_DB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmHuanLuyenVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmHuanLuyenVien.Designer.cs">
-      <DependentUpon>FrmHuanLuyenVien.cs</DependentUpon>
+    <Compile Include="FrmBanHuanLuyen.Designer.cs">
+      <DependentUpon>FrmBanHuanLuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNhaTaiTro.cs">
       <SubType>Form</SubType>
@@ -121,25 +133,29 @@
     <Compile Include="FrmNhaTaiTro.Designer.cs">
       <DependentUpon>FrmNhaTaiTro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTroLyHLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTroLyHLV.Designer.cs">
-      <DependentUpon>FrmTroLyHLV.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTuoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTuoi.Designer.cs">
       <DependentUpon>FrmTuoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KetNoiSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DoiBong\ChonDoi.resx">
+      <DependentUpon>ChonDoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiBong\Quanlydoibong.resx">
+      <DependentUpon>Quanlydoibong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCauThu.resx">
       <DependentUpon>FrmCauThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCuoiKy.resx">
+      <DependentUpon>FrmCuoiKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
@@ -150,23 +166,17 @@
     <EmbeddedResource Include="FrmHopDongCT_DB.resx">
       <DependentUpon>FrmHopDongCT_DB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHopDongHLV_DB.resx">
-      <DependentUpon>FrmHopDongHLV_DB.cs</DependentUpon>
+    <EmbeddedResource Include="FrmHopDongBHL_DB.resx">
+      <DependentUpon>FrmHopDongBHL_DB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHopDongNTT_DB.resx">
       <DependentUpon>FrmHopDongNTT_DB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHopDongTL_DB.resx">
-      <DependentUpon>FrmHopDongTL_DB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHuanLuyenVien.resx">
-      <DependentUpon>FrmHuanLuyenVien.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBanHuanLuyen.resx">
+      <DependentUpon>FrmBanHuanLuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhaTaiTro.resx">
       <DependentUpon>FrmNhaTaiTro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTroLyHLV.resx">
-      <DependentUpon>FrmTroLyHLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTuoi.resx">
       <DependentUpon>FrmTuoi.cs</DependentUpon>

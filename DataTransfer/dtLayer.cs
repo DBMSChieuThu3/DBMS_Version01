@@ -12,5 +12,6 @@ namespace DataTransfer
         public static string password;
         public static string datasource;
         public static string database;
+        public static string StrConnection;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DBMS_Version1
 {
-    partial class FrmHopDongHLV_DB
+    partial class FrmHopDongBHL_DB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHopDongHLV_DB));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHopDongBHL_DB));
             this.NgayKT = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtLuong = new System.Windows.Forms.TextBox();
@@ -36,7 +36,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.dgvHDHLV = new System.Windows.Forms.DataGridView();
+            this.dgvHDBHL = new System.Windows.Forms.DataGridView();
             this.NgayBD = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,14 +45,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.cmbMaDoi = new System.Windows.Forms.ComboBox();
+            this.cmbMaBHL = new System.Windows.Forms.ComboBox();
             this.MaDoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaHLV = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaBHL = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.NgBatDauHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgKetThucHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbMaDoi = new System.Windows.Forms.ComboBox();
-            this.cmbMaHLV = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHDHLV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDBHL)).BeginInit();
             this.SuspendLayout();
             // 
             // NgayKT
@@ -132,19 +132,19 @@
             this.label8.TabIndex = 115;
             this.label8.Text = "Danh sách các hợp đồng";
             // 
-            // dgvHDHLV
+            // dgvHDBHL
             // 
-            this.dgvHDHLV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHDHLV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvHDBHL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHDBHL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
-            this.MaHLV,
+            this.MaBHL,
             this.NgBatDauHD,
             this.NgKetThucHD,
             this.Luong});
-            this.dgvHDHLV.Location = new System.Drawing.Point(4, 162);
-            this.dgvHDHLV.Name = "dgvHDHLV";
-            this.dgvHDHLV.Size = new System.Drawing.Size(546, 231);
-            this.dgvHDHLV.TabIndex = 114;
+            this.dgvHDBHL.Location = new System.Drawing.Point(4, 162);
+            this.dgvHDBHL.Name = "dgvHDBHL";
+            this.dgvHDBHL.Size = new System.Drawing.Size(546, 231);
+            this.dgvHDBHL.TabIndex = 114;
             // 
             // NgayBD
             // 
@@ -162,7 +162,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 111;
-            this.label6.Text = "Mã HLV";
+            this.label6.Text = "Mã BHL";
             // 
             // label5
             // 
@@ -225,17 +225,33 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // cmbMaDoi
+            // 
+            this.cmbMaDoi.FormattingEnabled = true;
+            this.cmbMaDoi.Location = new System.Drawing.Point(137, 51);
+            this.cmbMaDoi.Name = "cmbMaDoi";
+            this.cmbMaDoi.Size = new System.Drawing.Size(201, 21);
+            this.cmbMaDoi.TabIndex = 125;
+            // 
+            // cmbMaBHL
+            // 
+            this.cmbMaBHL.FormattingEnabled = true;
+            this.cmbMaBHL.Location = new System.Drawing.Point(137, 78);
+            this.cmbMaBHL.Name = "cmbMaBHL";
+            this.cmbMaBHL.Size = new System.Drawing.Size(201, 21);
+            this.cmbMaBHL.TabIndex = 126;
+            // 
             // MaDoi
             // 
             this.MaDoi.DataPropertyName = "MaDoi";
             this.MaDoi.HeaderText = "Mã Đội";
             this.MaDoi.Name = "MaDoi";
             // 
-            // MaHLV
+            // MaBHL
             // 
-            this.MaHLV.DataPropertyName = "MaHLV";
-            this.MaHLV.HeaderText = "Mã HLV";
-            this.MaHLV.Name = "MaHLV";
+            this.MaBHL.DataPropertyName = "MaBHL";
+            this.MaBHL.HeaderText = "Mã BHL";
+            this.MaBHL.Name = "MaBHL";
             // 
             // NgBatDauHD
             // 
@@ -259,28 +275,12 @@
             this.Luong.HeaderText = "Lương";
             this.Luong.Name = "Luong";
             // 
-            // cmbMaDoi
-            // 
-            this.cmbMaDoi.FormattingEnabled = true;
-            this.cmbMaDoi.Location = new System.Drawing.Point(137, 51);
-            this.cmbMaDoi.Name = "cmbMaDoi";
-            this.cmbMaDoi.Size = new System.Drawing.Size(201, 21);
-            this.cmbMaDoi.TabIndex = 125;
-            // 
-            // cmbMaHLV
-            // 
-            this.cmbMaHLV.FormattingEnabled = true;
-            this.cmbMaHLV.Location = new System.Drawing.Point(137, 78);
-            this.cmbMaHLV.Name = "cmbMaHLV";
-            this.cmbMaHLV.Size = new System.Drawing.Size(201, 21);
-            this.cmbMaHLV.TabIndex = 126;
-            // 
-            // FrmHopDongHLV_DB
+            // FrmHopDongBHL_DB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 404);
-            this.Controls.Add(this.cmbMaHLV);
+            this.Controls.Add(this.cmbMaBHL);
             this.Controls.Add(this.cmbMaDoi);
             this.Controls.Add(this.NgayKT);
             this.Controls.Add(this.label7);
@@ -290,7 +290,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dgvHDHLV);
+            this.Controls.Add(this.dgvHDBHL);
             this.Controls.Add(this.NgayBD);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -298,10 +298,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmHopDongHLV_DB";
+            this.Name = "FrmHopDongBHL_DB";
             this.Text = "FrmHopDongHLV_DB";
-            this.Load += new System.EventHandler(this.FrmHopDongHLV_DB_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHDHLV)).EndInit();
+            this.Load += new System.EventHandler(this.FrmHopDongBHL_DB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDBHL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,7 +316,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dgvHDHLV;
+        private System.Windows.Forms.DataGridView dgvHDBHL;
         private System.Windows.Forms.DateTimePicker NgayBD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -324,13 +324,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ComboBox cmbMaDoi;
+        private System.Windows.Forms.ComboBox cmbMaBHL;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaDoi;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MaHLV;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaBHL;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgBatDauHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgKetThucHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Luong;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ComboBox cmbMaDoi;
-        private System.Windows.Forms.ComboBox cmbMaHLV;
     }
 }

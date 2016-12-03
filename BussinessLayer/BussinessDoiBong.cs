@@ -21,14 +21,42 @@ namespace BussinessLayer
             return dal.ExecuteQueryDataSet("Select * From DoiBong ",
                 CommandType.Text, null);
         }
+        //Get đội bóng theo mã
+        public DataSet getDoiBongTheoMa(String madoibong)
+        {
+            return dal.ExecuteQueryDataSet("Select * From DoiBong where MaDoi='"+madoibong+"'",
+               CommandType.Text, null);
+        }
+        //get NTT còn hợp đồng theo mã Đôi
+        public DataSet getNhaTaiTroTheoMa(String madoibong)
+        {
+            return dal.ExecuteQueryDataSet("select TenNTT,TienTaiTro from NhaTaiTro ntt, HopDongNTT_DB hd where ntt.MaNTT = hd.MaNTT " +
+               " and MaDoi = '"+madoibong+"' and GETDATE() >= NgBatDauHD and GETDATE() <= NgKetThucHD",
+               CommandType.Text, null);
+        }
+        //get BHL còn hợp đồng theo Mã ĐỘi
+        public DataSet getBanHLTheoMa(String madoibong)
+        {
+            return dal.ExecuteQueryDataSet("select TenBHL,TenLoai from BanHL bhl,HopDongBHL_DB hd,LoaiBanHuanLuyen loai "+
+            " where loai.MaLoai = bhl.MaLoai and bhl.MaBHL = hd.MaBHL and MaDoi = '" + madoibong + "' and GETDATE() >= NgBatDauHD and GETDATE() <= NgKetThucHD",
+               CommandType.Text, null);
+        }
+
+        //Get Cầu thủ còn hợp đồng theo mã Đội
+        public DataSet getCauThuTheoMa(String madoibong)
+        {
+            return dal.ExecuteQueryDataSet("select TenCT,vt.MaVT,TenVT from CauThu ct,HopDongCT_DB hd,ViTri vt" +
+            " where vt.MaVT=ct.MaVT and ct.MaCT = hd.MaCT and MaDoi = '" + madoibong + "' and GETDATE() >= NgBatDauHD and GETDATE() <= NgKetThucHD",
+                CommandType.Text, null);
+        }
 
         public bool ThemDoiBong(ref string err, string MaDoi, string TenDoi,
-            DateTime NgThanhLap, string MaTuoi)
+            DateTime NgayThanhLap, string MaTuoi)
         {
             return dal.MyExecuteNonQuery("sp_Ins_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
                 new SqlParameter("@TenDoi", TenDoi),
-                new SqlParameter("@NgThanhLap", NgThanhLap),
+                new SqlParameter("@NgayThanhLap", NgayThanhLap),
                 new SqlParameter("@MaTuoi", MaTuoi));
         }
 
@@ -40,13 +68,15 @@ namespace BussinessLayer
         }
 
         public bool CapNhatDoiBong(ref string err, string MaDoi, string TenDoi,
-            DateTime NgThanhLap, string MaTuoi)
+            DateTime NgayThanhLap, string MaTuoi)
         {
             return dal.MyExecuteNonQuery("sp_Update_DB", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MaDoi", MaDoi),
                 new SqlParameter("@TenDoi", TenDoi),
-                new SqlParameter("@NgayThanhLap", NgThanhLap),
+                new SqlParameter("@NgayThanhLap", NgayThanhLap),
                 new SqlParameter("@MaTuoi", MaTuoi));
         }
+
+
     }
 }

@@ -117,13 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAapJREFUOE+dkNsrg3EYx19NNFrhgjZDKzfIBYXllMN4HWdbORVqDm0JKxTiYi4l
+        LlzuQlFKLkTJhVwtoTEjG8IcZo7xN3y9z2+UHGqvbz319j7v5/P+fl/ur4TPSPB1hFeKwCbIFDmyUOLM
+        Bn+kRrWn4FMSfMoO1QKcixpPIZovy8UL6K+1J4VoveQx4DOIFxjOSmH0VmDIV4/Jx3bxgr4bHYbvGhhs
+        e7H8LaBFiVAY3bnKnQ/dWTFM1zUY9Tdh+rGTwXNvg1h4G2LPJKRTtV9VYtFrAxNoDnIYTMcm2HrfjJkn
+        E2Zf+xlMQ7J+nxb8aRqSndGQ26WwHHcFBJ9w93Utxh9a2McETz23YeROg97bPDRepCPfk8jgOHs4ZOsh
+        MO8bA4Kmcw3ozgRb/VoGjfl5NqZbNQwXqchxK6Hai0IswWscwpY4dG4JAiEK+Uokvs+gr4jBdecpyHTH
+        /9jT6PX6CVbkb2m5ymBwxpEcSbsyBnysgkvxqQqprjgk7MgQsxkqXkBlKbcjELMhgXSVEy+gsqIIXuYg
+        mf+HwOoaRs9hB8wOI2v798I47h0Afy3e+tbT2wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="MaDoi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
+  <metadata name="MaBHL.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+  <metadata name="NgBatDauHD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NgKetThucHD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Luong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

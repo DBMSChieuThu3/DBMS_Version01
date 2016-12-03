@@ -37,7 +37,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvCT = new System.Windows.Forms.DataGridView();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCao = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtTCT = new System.Windows.Forms.TextBox();
@@ -50,11 +50,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtCanNang = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.MaCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CanNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaVT = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +65,7 @@
             // cmbVTST
             // 
             this.cmbVTST.FormattingEnabled = true;
-            this.cmbVTST.Location = new System.Drawing.Point(417, 99);
+            this.cmbVTST.Location = new System.Drawing.Point(576, 65);
             this.cmbVTST.Name = "cmbVTST";
             this.cmbVTST.Size = new System.Drawing.Size(139, 21);
             this.cmbVTST.TabIndex = 84;
@@ -71,7 +74,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(279, 99);
+            this.label9.Location = new System.Drawing.Point(574, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 17);
             this.label9.TabIndex = 83;
@@ -150,29 +153,30 @@
             this.TenCT,
             this.NgSinh,
             this.DiaChi,
-            this.SoDT,
+            this.Cao,
+            this.CanNang,
             this.MaVT});
-            this.dgvCT.Location = new System.Drawing.Point(12, 149);
+            this.dgvCT.Location = new System.Drawing.Point(8, 151);
             this.dgvCT.Name = "dgvCT";
             this.dgvCT.Size = new System.Drawing.Size(646, 231);
             this.dgvCT.TabIndex = 75;
             // 
-            // txtSDT
+            // txtCao
             // 
-            this.txtSDT.Location = new System.Drawing.Point(417, 75);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(139, 20);
-            this.txtSDT.TabIndex = 74;
+            this.txtCao.Location = new System.Drawing.Point(417, 75);
+            this.txtCao.Name = "txtCao";
+            this.txtCao.Size = new System.Drawing.Size(139, 20);
+            this.txtCao.TabIndex = 74;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(279, 71);
+            this.label7.Location = new System.Drawing.Point(279, 76);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.Size = new System.Drawing.Size(36, 17);
             this.label7.TabIndex = 73;
-            this.label7.Text = "Số điện thoại";
+            this.label7.Text = "Cao";
             // 
             // NgaySinh
             // 
@@ -271,6 +275,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtCanNang
+            // 
+            this.txtCanNang.Location = new System.Drawing.Point(417, 103);
+            this.txtCanNang.Name = "txtCanNang";
+            this.txtCanNang.Size = new System.Drawing.Size(139, 20);
+            this.txtCanNang.TabIndex = 170;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(279, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 17);
+            this.label10.TabIndex = 169;
+            this.label10.Text = "Cân Nặng";
+            // 
             // MaCT
             // 
             this.MaCT.DataPropertyName = "MaCT";
@@ -295,11 +316,17 @@
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
             // 
-            // SoDT
+            // Cao
             // 
-            this.SoDT.DataPropertyName = "SoDT";
-            this.SoDT.HeaderText = "Số ĐT";
-            this.SoDT.Name = "SoDT";
+            this.Cao.DataPropertyName = "Cao";
+            this.Cao.HeaderText = "Cao";
+            this.Cao.Name = "Cao";
+            // 
+            // CanNang
+            // 
+            this.CanNang.DataPropertyName = "CanNang";
+            this.CanNang.HeaderText = "Cân Nặng";
+            this.CanNang.Name = "CanNang";
             // 
             // MaVT
             // 
@@ -312,6 +339,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 388);
+            this.Controls.Add(this.txtCanNang);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbVTST);
             this.Controls.Add(this.label9);
@@ -321,7 +350,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvCT);
-            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtCao);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.NgaySinh);
             this.Controls.Add(this.txtTCT);
@@ -352,7 +381,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvCT;
-        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtCao;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker NgaySinh;
         private System.Windows.Forms.TextBox txtTCT;
@@ -365,11 +394,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtCanNang;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CanNang;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaVT;
     }
 }

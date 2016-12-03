@@ -28,64 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtDatabase = new System.Windows.Forms.TextBox();
-            this.txtServer = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbPass = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.btn_check = new System.Windows.Forms.Button();
+            this.btn_thoat = new System.Windows.Forms.Button();
+            this.btn_connection = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtServer = new System.Windows.Forms.TextBox();
+            this.cboxDatabase = new System.Windows.Forms.ComboBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtDatabase);
-            this.panel1.Controls.Add(this.txtServer);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtPass);
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.btnOK);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(485, 71);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 244);
-            this.panel1.TabIndex = 3;
-            // 
-            // txtDatabase
-            // 
-            this.txtDatabase.Location = new System.Drawing.Point(10, 84);
-            this.txtDatabase.Name = "txtDatabase";
-            this.txtDatabase.Size = new System.Drawing.Size(164, 20);
-            this.txtDatabase.TabIndex = 3;
-            this.txtDatabase.Text = "QLNhanSuCLB_2";
-            this.txtDatabase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDatabase_KeyPress);
-            // 
-            // txtServer
-            // 
-            this.txtServer.Location = new System.Drawing.Point(10, 36);
-            this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(164, 20);
-            this.txtServer.TabIndex = 2;
-            this.txtServer.Text = "(local)\\SQLExpress";
-            this.txtServer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtServer_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 59);
+            this.label5.Location = new System.Drawing.Point(489, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 23);
             this.label5.TabIndex = 7;
@@ -95,77 +59,31 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 11);
+            this.label6.Location = new System.Drawing.Point(489, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "Server:";
             // 
-            // txtPass
+            // lbPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(10, 176);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(164, 20);
-            this.txtPass.TabIndex = 5;
-            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
+            this.lbPass.AutoSize = true;
+            this.lbPass.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPass.Location = new System.Drawing.Point(489, 178);
+            this.lbPass.Name = "lbPass";
+            this.lbPass.Size = new System.Drawing.Size(91, 23);
+            this.lbPass.TabIndex = 1;
+            this.lbPass.Text = "Password";
             // 
-            // txtID
+            // lbName
             // 
-            this.txtID.Location = new System.Drawing.Point(10, 128);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(164, 20);
-            this.txtID.TabIndex = 4;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(99, 202);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 31);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Exit";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(18, 202);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 31);
-            this.btnOK.TabIndex = 6;
-            this.btnOK.Text = "Login";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(131, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(404, 27);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "CÂU LẠC BỘ BÓNG ĐÁ CTRL + F5";
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Trebuchet MS", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(489, 129);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(63, 23);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Login:";
             // 
             // label3
             // 
@@ -188,23 +106,103 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_check
+            // 
+            this.btn_check.Location = new System.Drawing.Point(523, 230);
+            this.btn_check.Name = "btn_check";
+            this.btn_check.Size = new System.Drawing.Size(103, 23);
+            this.btn_check.TabIndex = 33;
+            this.btn_check.Text = "Check Connect";
+            this.btn_check.UseVisualStyleBackColor = true;
+            this.btn_check.Click += new System.EventHandler(this.btn_check_Click);
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Location = new System.Drawing.Point(584, 353);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(75, 23);
+            this.btn_thoat.TabIndex = 32;
+            this.btn_thoat.Text = "Cancel";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            // 
+            // btn_connection
+            // 
+            this.btn_connection.Location = new System.Drawing.Point(505, 353);
+            this.btn_connection.Name = "btn_connection";
+            this.btn_connection.Size = new System.Drawing.Size(75, 23);
+            this.btn_connection.TabIndex = 31;
+            this.btn_connection.Text = "Connect";
+            this.btn_connection.UseVisualStyleBackColor = true;
+            this.btn_connection.Click += new System.EventHandler(this.btn_connection_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(206, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 27);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "CÂU LẠC BỘ BÓNG ĐÁ";
+            // 
+            // txtServer
+            // 
+            this.txtServer.Location = new System.Drawing.Point(493, 106);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(184, 20);
+            this.txtServer.TabIndex = 37;
+            this.txtServer.TextChanged += new System.EventHandler(this.txtServer_TextChanged);
+            // 
+            // cboxDatabase
+            // 
+            this.cboxDatabase.FormattingEnabled = true;
+            this.cboxDatabase.Location = new System.Drawing.Point(493, 282);
+            this.cboxDatabase.Name = "cboxDatabase";
+            this.cboxDatabase.Size = new System.Drawing.Size(184, 21);
+            this.cboxDatabase.TabIndex = 39;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(493, 155);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(184, 20);
+            this.txtLogin.TabIndex = 40;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(493, 204);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(184, 20);
+            this.txtPassword.TabIndex = 41;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(679, 414);
+            this.ClientSize = new System.Drawing.Size(692, 414);
             this.ControlBox = false;
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.cboxDatabase);
+            this.Controls.Add(this.txtServer);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btn_check);
+            this.Controls.Add(this.btn_thoat);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btn_connection);
+            this.Controls.Add(this.lbPass);
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,20 +210,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbPass;
+        private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtDatabase;
-        private System.Windows.Forms.TextBox txtServer;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_check;
+        private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Button btn_connection;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtServer;
+        private System.Windows.Forms.ComboBox cboxDatabase;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

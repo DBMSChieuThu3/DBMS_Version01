@@ -38,6 +38,11 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvHDCT = new System.Windows.Forms.DataGridView();
+            this.MaCT = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaDoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NgBatDauHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgKetThucHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayBD = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,11 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMaDoi = new System.Windows.Forms.ComboBox();
             this.cmbMaCT = new System.Windows.Forms.ComboBox();
-            this.MaCT = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaDoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NgBatDauHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgKetThucHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDCT)).BeginInit();
             this.SuspendLayout();
@@ -161,10 +161,44 @@
             this.dgvHDCT.Size = new System.Drawing.Size(549, 213);
             this.dgvHDCT.TabIndex = 134;
             // 
+            // MaCT
+            // 
+            this.MaCT.DataPropertyName = "MaCT";
+            this.MaCT.HeaderText = "Mã Cầu Thủ";
+            this.MaCT.Name = "MaCT";
+            this.MaCT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaCT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.HeaderText = "Mã Đội Bóng";
+            this.MaDoi.Name = "MaDoi";
+            this.MaDoi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaDoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // NgBatDauHD
+            // 
+            this.NgBatDauHD.DataPropertyName = "NgBatDauHD";
+            this.NgBatDauHD.HeaderText = "Ngày bắt đầu";
+            this.NgBatDauHD.Name = "NgBatDauHD";
+            // 
+            // NgKetThucHD
+            // 
+            this.NgKetThucHD.DataPropertyName = "NgKetThucHD";
+            this.NgKetThucHD.HeaderText = "Ngày kết thúc";
+            this.NgKetThucHD.Name = "NgKetThucHD";
+            // 
+            // Luong
+            // 
+            this.Luong.DataPropertyName = "Luong";
+            this.Luong.HeaderText = "Lương";
+            this.Luong.Name = "Luong";
+            // 
             // NgayBD
             // 
-            this.NgayBD.CustomFormat = "yyyy/MM/dd";
-            this.NgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.NgayBD.CustomFormat = "yyyy/MM/dd ";
+            this.NgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayBD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.NgayBD.Location = new System.Drawing.Point(437, 30);
             this.NgayBD.Name = "NgayBD";
@@ -244,40 +278,6 @@
             this.cmbMaCT.Name = "cmbMaCT";
             this.cmbMaCT.Size = new System.Drawing.Size(156, 21);
             this.cmbMaCT.TabIndex = 146;
-            // 
-            // MaCT
-            // 
-            this.MaCT.DataPropertyName = "MaCT";
-            this.MaCT.HeaderText = "Mã Cầu Thủ";
-            this.MaCT.Name = "MaCT";
-            this.MaCT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaCT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.HeaderText = "Mã Đội Bóng";
-            this.MaDoi.Name = "MaDoi";
-            this.MaDoi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaDoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // NgBatDauHD
-            // 
-            this.NgBatDauHD.DataPropertyName = "NgBatDauHD";
-            this.NgBatDauHD.HeaderText = "Ngày bắt đầu";
-            this.NgBatDauHD.Name = "NgBatDauHD";
-            // 
-            // NgKetThucHD
-            // 
-            this.NgKetThucHD.DataPropertyName = "NgKetThucHD";
-            this.NgKetThucHD.HeaderText = "Ngày kết thúc";
-            this.NgKetThucHD.Name = "NgKetThucHD";
-            // 
-            // Luong
-            // 
-            this.Luong.DataPropertyName = "Luong";
-            this.Luong.HeaderText = "Lương";
-            this.Luong.Name = "Luong";
             // 
             // button1
             // 
